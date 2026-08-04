@@ -5,37 +5,28 @@
 	"name": "WillowTweaks",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"WillowBranch127"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/willowtweaks/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"io.github.willowbranch.willowtweaks.WillowTweaks"
-		],
-		"client": [
-			"io.github.willowbranch.willowtweaks.client.WillowTweaksClient"
-		],
-		"fabric-datagen": [
-			"io.github.willowbranch.willowtweaks.client.WillowTweaksDataGenerator"
 		]
 	},
 	"mixins": [
-		"willowtweaks.mixins.json",
-		{
-			"config": "willowtweaks.client.mixins.json",
-			"environment": "client"
-		}
+		"willowtweaks.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~26.2",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"malilib": "*"
 	}
 }

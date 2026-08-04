@@ -1,11 +1,15 @@
 package io.github.willowbranch.willowtweaks;
 
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import fi.dy.masa.malilib.event.InitializationHandler;
+
+
 
 public class WillowTweaks implements ModInitializer {
 	public static final String MOD_ID = "willowtweaks";
@@ -20,9 +24,15 @@ public class WillowTweaks implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+		//LOGGER.info("Hello Fabric world!");
+		InitializationHandler.getInstance().registerInitializationHandler(new InitHandler());
 	}
+
+
+
+
+
+
 
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
