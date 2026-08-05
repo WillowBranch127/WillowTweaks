@@ -11,3 +11,4 @@ public class FlySpeedConfig
                     "Auto boost speed threshold"
             );
 }
+//test
