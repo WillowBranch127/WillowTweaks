@@ -8,6 +8,7 @@ import fi.dy.masa.malilib.registry.Registry;
 import fi.dy.masa.malilib.util.data.ModInfo;
 import io.github.willowbranch.willowtweaks.config.Configs;
 import io.github.willowbranch.willowtweaks.config.KeybindProvider;
+import io.github.willowbranch.willowtweaks.event.ClientTickHandler;
 import io.github.willowbranch.willowtweaks.event.InputHandler;
 import io.github.willowbranch.willowtweaks.gui.GuiConfigs;
 
@@ -41,7 +42,7 @@ public class InitHandler implements IInitializationHandler
         InputEventHandler.getInputManager()
                 .registerKeyboardInputHandler(InputHandler.getInstance());
 
-
+        ClientTickHandler.register();
 
     }
 }

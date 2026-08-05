@@ -14,7 +14,15 @@ public enum FeatureToggle implements IHotkeyTogglable
     SHOW_PLAYER_LIST(
             "alwaysShowPlayerList",
             false,
-            "Always show player list"
+            "Always show player list",
+            ""
+    ),
+
+    AUTO_FLY(
+            "autoFly",
+            false,
+            "Automatically use fireworks",
+            ""
     );
 
 
@@ -22,7 +30,7 @@ public enum FeatureToggle implements IHotkeyTogglable
     private final IKeybind keybind;
 
 
-    FeatureToggle(String name, boolean value, String comment)
+    FeatureToggle(String name, boolean value, String comment, String hotkey)
     {
         this.config = new ConfigBoolean(
                 name,
@@ -31,7 +39,7 @@ public enum FeatureToggle implements IHotkeyTogglable
         );
 
         this.keybind = KeybindMulti.fromStorageString(
-                "",
+                hotkey,
                 KeybindSettings.DEFAULT
         );
 /*
