@@ -32,7 +32,9 @@ public class Configs implements IConfigHandler
         public static final ImmutableList<IConfigBase> OPTIONS =
                 ImmutableList.of(
                         FeatureToggle.SHOW_PLAYER_LIST,
-                        FeatureToggle.AUTO_FLY
+                        FeatureToggle.AUTO_FLY,
+                        FeatureToggle.AUTO_FLY_BOOST,
+                        FlySpeedConfig.SPEED_THRESHOLD
                 );
     }
 

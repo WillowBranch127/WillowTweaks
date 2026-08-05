@@ -45,7 +45,7 @@ public class AutoFly
 
 
 
-    private static void tryStart(LocalPlayer player)
+    public static void tryStart(LocalPlayer player)
     {
         int slot = findBestRocketInHotbar(player);
 

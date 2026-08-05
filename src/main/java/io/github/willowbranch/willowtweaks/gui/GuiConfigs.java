@@ -11,6 +11,7 @@ import fi.dy.masa.malilib.gui.GuiConfigsBase.ConfigOptionWrapper;
 import io.github.willowbranch.willowtweaks.Reference;
 import io.github.willowbranch.willowtweaks.config.Configs;
 import io.github.willowbranch.willowtweaks.config.FeatureToggle;
+import io.github.willowbranch.willowtweaks.config.FlySpeedConfig;
 
 
 public class GuiConfigs extends GuiConfigsBase
@@ -36,6 +37,14 @@ public class GuiConfigs extends GuiConfigsBase
         list.addAll(
                 ConfigOptionWrapper.createFor(
                         Configs.Generic.OPTIONS
+                )
+        );
+
+        list.addAll(
+                ConfigOptionWrapper.createFor(
+                        java.util.List.of(
+                                FlySpeedConfig.SPEED_THRESHOLD
+                        )
                 )
         );
 

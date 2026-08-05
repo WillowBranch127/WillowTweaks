@@ -23,6 +23,13 @@ public enum FeatureToggle implements IHotkeyTogglable
             false,
             "Automatically use fireworks",
             ""
+    ),
+
+    AUTO_FLY_BOOST(
+            "autoFlyBoost",
+            false,
+            "Automatically boost elytra speed",
+            ""
     );
 
 
